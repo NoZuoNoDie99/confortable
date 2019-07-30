@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="exploded-war" name="confortable:Web exploded">
-    <output-path>$PROJECT_DIR$/out/artifacts/confortable_Web_exploded</output-path>
+    <output-path>$PROJECT_DIR$/target/classes</output-path>
     <root id="root">
       <element id="javaee-facet-resources" facet="confortable/web/Web" />
       <element id="directory" name="WEB-INF">
