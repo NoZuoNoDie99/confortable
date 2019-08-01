@@ -1,5 +1,14 @@
+com\hoperun\utils\LogAspect.class
+com\hoperun\mapper\UserLoginMapper.class
 com\hoperun\service\impl\EmployeeServiceImpl.class
+com\hoperun\pojo\Employee.class
+com\hoperun\service\UserLoginService.class
+com\hoperun\utils\RedisUtil.class
+com\hoperun\service\impl\UserloginServiceImpl.class
+com\hoperun\service\EmployeeService.class
 com\hoperun\mapper\EmployeeMapper.class
 com\hoperun\controller\EmployeeController.class
-com\hoperun\pojo\Employee.class
-com\hoperun\service\EmployeeService.class
+com\hoperun\controller\UserLoginController.class
+com\hoperun\pojo\User.class
+com\hoperun\utils\SerializeUtil.class
+com\hoperun\utils\MyException.class

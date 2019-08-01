@@ -19,20 +19,28 @@
 		  class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
 		<property name="dataSource" ref="dataSource" />
 	</bean>
-
+	<!--扫描包-->
 	<context:component-scan base-package="com.hoperun.service"/>
+	<context:component-scan base-package="com.hoperun.mapper"/>
 
-	<!--  配置参与事务的类 -->
-	<aop:config>
+	<!--  AOP事务管理:配置参与事务的类 -->
+	<!--<aop:config>
 		<aop:pointcut id="allServiceMethod" expression="execution(* com.hoperun.service.*.*(..))" />
 		<aop:advisor pointcut-ref="allServiceMethod" advice-ref="TxAdvice" />
-	</aop:config>
+	</aop:config>-->
 
-	<!-- 使用声明方式配置事务 -->
-	<tx:advice id="TxAdvice" transaction-manager="transactionManager">
+	<!-- 事务通知 -->
+	<!--<tx:advice id="TxAdvice" transaction-manager="transactionManager">
 		<tx:attributes>
 			<tx:method name="*" propagation="REQUIRED" rollback-for="java.lang.Exception"/>
 		</tx:attributes>
-	</tx:advice>
+	</tx:advice>-->
 
+	<!--由于AOP管理Redis的事务无效，所以改用注解的方式实现事务管理-->
+	<!--注解的事务管理-->
+	<tx:annotation-driven transaction-manager="transactionManager"/>
+	<!--注解的AOP管理-->
+	<aop:aspectj-autoproxy proxy-target-class="true"/>
+	<!--AOP切面-->
+	<bean id="LogAspect" class="com.hoperun.utils.LogAspect"/>
 </beans>

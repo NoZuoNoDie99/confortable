@@ -19,7 +19,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   
   <body>
     <%
-    	response.sendRedirect("showIndex.action");
+    	response.sendRedirect("login.action");
     %>
   </body>
 </html>

@@ -13,6 +13,8 @@
 	<!-- 引入配置文件 -->
 	<bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
 		<property name="location" value="classpath:jdbc.properties" />
+		<!--解决多个placeholder冲突-->
+		<property name="ignoreUnresolvablePlaceholders" value="true" />
 	</bean>
 
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
