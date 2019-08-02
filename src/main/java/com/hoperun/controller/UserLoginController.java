@@ -36,6 +36,11 @@ public class UserLoginController {
             return "login";
         }
     }
+    @RequestMapping("/toAddUser")
+    public String toAddUser(){
+        return "registered";
+    }
+
     @RequestMapping("/addUser")
     public String addUser(Model model,User user) throws MyException {
         userLoginService.addUser(user);

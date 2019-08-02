@@ -1,11 +1,13 @@
 package com.hoperun.pojo;
 
+import java.io.Serializable;
+
 /**
  * @descriptiom:用户信息实体
  * @Author: 武政旭
  * @Date: 2019/7/31 15:00
  */
-public class User {
+public class User implements Serializable {
     private Integer userId;
     private String userName;
     private Integer userPassword;

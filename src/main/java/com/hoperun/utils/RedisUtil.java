@@ -78,13 +78,16 @@ public class RedisUtil {
      * @return
      */
     public Object get(String key) {
+        Object object = null;
         try {
-            Object object = redisTemplate.opsForValue().get(key);
-            return object;
+            if (key != null){
+                object = redisTemplate.opsForValue().get(key);
+            }
         } catch (Exception e) {
             e.printStackTrace();
             return null;
         }
+        return object;
     }
 
     /**普通缓存放入
