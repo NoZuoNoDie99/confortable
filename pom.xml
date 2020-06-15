@@ -100,7 +100,7 @@
         <dependency>
             <groupId>commons-collections</groupId>
             <artifactId>commons-collections</artifactId>
-            <version>3.2.1</version>
+            <version>3.2.2</version>
         </dependency>
 
         <!-- 导入dbcp的jar包，用来在applicationContext.xml中配置数据库 -->
